@@ -1,0 +1,85 @@
+html {
+	box-sizing: border-box;
+	font-size: 16px;
+  font-family: 'Palanquin', sans-serif;
+}
+
+*,
+*:before,
+*:after { /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+	box-sizing: inherit;
+}
+
+body {
+	background: $color__background-body; /* Fallback for when there is no custom background color defined. */
+}
+
+blockquote, q {
+	quotes: "" "";
+
+	&:before,
+	&:after {
+		content: "";
+	}
+}
+
+hr {
+	background-color: $color__background-hr;
+	border: 0;
+	height: 1px;
+	margin-bottom: 1.5em;
+}
+
+// New Shit will go in elements for now
+a {
+  font-family: 'Palanquin', sans-serif;
+}
+
+a:visited {
+  color: #fff;
+}
+
+.full-bg {
+  background: url("http://www.thedeviousmeans.com/wp-content/uploads/2014/07/tdm_animals2.jpg") center top no-repeat scroll;
+  background-size: cover;
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+
+.site-title {
+  margin: 2em 0 .5em;
+  font-size: 2em;
+  a {
+    background: rgba(0,0,0,.6);
+    color: #fff;
+    padding: .5em;
+    &:visited {
+      color: #fff;
+    }
+  }
+}
+
+.main-navigation {
+  a {
+    display: block;
+    text-decoration: none;
+    padding: .5em;
+    background: rgba(0,0,0,.6);
+    margin-right: .5em;
+    color: #fff;
+    &:visited {
+      color: #fff;
+    }
+  }
+}
+
+
+@import "lists";
+
+img {
+	height: auto; /* Make sure images are scaled correctly. */
+	max-width: 100%; /* Adhere to container width. */
+}
+
+@import "tables";
